@@ -5,9 +5,9 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <main className="relative flex flex-1 items-center justify-between px-9 py-20 space-x-12 max-w-7xl mx-auto z-10">
+    <main className="relative flex flex-col md:flex-row flex-1 items-center justify-between px-4 md:px-9 py-10 md:py-20 md:space-x-12 gap-8 max-w-7xl mx-auto z-10">
       {/* Left Content */}
-      <div className="max-w-lg">
+      <div className="w-full md:max-w-lg mt-20 md:pb-56">
         <h1 className="text-4xl font-bold text-black mb-4">
           Lorem ipsum dolor sit amet
         </h1>
@@ -18,21 +18,21 @@ export default function Hero() {
           eget viverra. Nunc euismod ultrices etiam nulla habitasse.
         </p>
 
-        <form className="flex items-center space-x-4 mb-4">
+        <form className="flex flex-col sm:flex-row items-center sm:space-x-4 gap-4 mb-4">
           <input
             type="email"
             placeholder="example@mail.com"
-            className="border text-black placeholder:text-gray-500 border-gray-300 rounded px-4 py-2 w-72 focus:outline-none focus:ring-2 focus:ring-blue-600"
+            className="border text-black placeholder:text-gray-500 border-gray-300 rounded px-4 py-2 w-full sm:w-72 focus:outline-none focus:ring-2 focus:ring-blue-600"
           />
           <button
             type="submit"
-            className="bg-blue-700 text-white px-5 py-2 rounded hover:bg-blue-800 flex items-center"
+            className="bg-blue-700 text-white px-5 py-2 w-full sm:w-auto rounded hover:bg-blue-800 flex items-center justify-center"
           >
             Subscribe →
           </button>
         </form>
 
-        <div className="flex items-center space-x-2 text-blue-700 font-semibold">
+        <div className="flex items-center gap-2 text-blue-700 font-semibold">
           <Image
             alt="icon"
             src={assets?.circleCheck?.src}
