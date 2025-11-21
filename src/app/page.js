@@ -1,9 +1,11 @@
 // Page.jsx (or wherever you use both components)
 import Hero from "./components/HeroSection";
 import { assets } from "../../public/assets";
+import SecondHeroSection from "./components/SecondHeroSection";
 
 export default function Page() {
   return (
+    <>
     <div className="  min-h-screen">
       {/* Hero Image Background - Positioned absolutely */}
       <div
@@ -19,8 +21,9 @@ export default function Page() {
       />
 
       {/* Components */}
-
       <Hero />
     </div>
+    <SecondHeroSection />
+    </>
   );
 }
