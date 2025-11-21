@@ -31,7 +31,9 @@ function SecondHeroSection() {
                   src={item?.img}
                   className="w-36 space-y-2 p-2"
                 />
-                <p className="text-base text-gray-700 max-w-xs">{item?.content}</p>
+                <p className="text-base text-gray-700 max-w-xs">
+                  {item?.content}
+                </p>
               </div>
             ))}
           </div>
@@ -46,8 +48,13 @@ function SecondHeroSection() {
           </div>
         </div>
         <div className="pt-4 flex gap-3">
-                  <button className="bg-blue-700 font-semibold rounded hover:bg-blue-800 text-white flex p-2 gap-2">Lorem Ipsum <MoveRight /></button>
-                  <p className="flex gap-2 items-center text-blue-800 font-semibold"><PhoneCall size={20} />123456789</p>
+          <button className="bg-blue-700 font-semibold rounded hover:bg-blue-800 text-white flex p-2 gap-2">
+            Lorem Ipsum <MoveRight />
+          </button>
+          <p className="flex gap-2 items-center text-blue-800 font-semibold">
+            <PhoneCall size={20} />
+            123456789
+          </p>
         </div>
       </div>
     </div>
