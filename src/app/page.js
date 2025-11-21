@@ -1,11 +1,26 @@
+// Page.jsx (or wherever you use both components)
 import Hero from "./components/HeroSection";
+import { assets } from "../../public/assets";
 
- 
-
-export default function Home() {
+export default function Page() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="  min-h-screen">
+      {/* Hero Image Background - Positioned absolutely */}
+      <div
+        className="absolute md:block hidden top-0 right-0 overflow-hidden w-[50%] h-full "
+        style={{
+          clipPath: "polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)",
+          backgroundImage: `url(${assets?.HeroImage?.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          width: "full",
+          zIndex: 0,
+        }}
+      />
+
+      {/* Components */}
+
       <Hero />
-     </div>
+    </div>
   );
 }

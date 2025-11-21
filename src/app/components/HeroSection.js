@@ -1,19 +1,17 @@
-'use client'
-import Image from "next/image";
+"use client";
 import React from "react";
 import { assets } from "../../../public/assets";
+import Image from "next/image";
 
 export default function Hero() {
-    console.log(assets);
-    
   return (
-    <main className="flex flex-1 items-center justify-between px-12 py-20 space-x-12 max-w-6xl mx-auto">
+    <main className="relative flex flex-1 items-center justify-between px-9 py-20 space-x-12 max-w-7xl mx-auto z-10">
       {/* Left Content */}
       <div className="max-w-lg">
-        <h1 className="text-3xl font-extrabold mb-4">
+        <h1 className="text-4xl font-bold text-black mb-4">
           Lorem ipsum dolor sit amet
         </h1>
-        <p className="mb-8 text-gray-700">
+        <p className="mb-8 text-gray-700 leading-7">
           Lorem ipsum dolor sit amet consectetur. Enim netus cras congue quis
           elit sociis. Sed mi rhoncus id habitant. In urna tellus nisi platea
           morbi libero imperdiet neque. Justo suspendisse tristique posuere quis
@@ -24,7 +22,7 @@ export default function Hero() {
           <input
             type="email"
             placeholder="example@mail.com"
-            className="border border-gray-300 rounded px-4 py-2 w-72 focus:outline-none focus:ring-2 focus:ring-blue-600"
+            className="border text-black placeholder:text-gray-500 border-gray-300 rounded px-4 py-2 w-72 focus:outline-none focus:ring-2 focus:ring-blue-600"
           />
           <button
             type="submit"
@@ -35,36 +33,15 @@ export default function Hero() {
         </form>
 
         <div className="flex items-center space-x-2 text-blue-700 font-semibold">
-          <CheckMarkIcon />
+          <Image
+            alt="icon"
+            src={assets?.circleCheck?.src}
+            width={20}
+            height={20}
+          />
           <span>No credit required!</span>
         </div>
       </div>
-
-      {/* Right Image */}
-      <div
-        className="relative overflow-hidden"
-        style={{ clipPath: "polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
-      >
-        <Image
-          src={assets?.HeroImage?.src}
-          width={500}
-          height={400}
-          alt="Hero-image"
-        />
-      </div>
     </main>
-  );
-}
-
-function CheckMarkIcon() {
-  return (
-    <svg
-      className="w-5 h-5 fill-current"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 20 20"
-      aria-hidden="true"
-    >
-      <path d="M7.629 13.314l-3.314-3.314-1.415 1.415 4.729 4.729 10-10-1.415-1.414z" />
-    </svg>
   );
 }
