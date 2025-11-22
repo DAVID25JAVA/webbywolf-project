@@ -23,7 +23,19 @@ import Frame1 from "./Frame1.png";
 import Frame2 from "./Frame2.png";
 import Frame3 from "./Frame3.png";
 import Frame4 from "./Frame4.png";
-import Banner2 from './Banner2.png'
+import Banner2 from "./Banner2.png";
+import playstore from "./playstore.png";
+import appstore from "./appstore.png";
+import phone from "./phone.png";
+import bike1 from "./bike1.png";
+import bike2 from "./bike2.png";
+import bike3 from "./bike3.png";
+import bike4 from "./bike4.png";
+import bike5 from "./bike5.png";
+import bike6 from "./bike6.png";
+import bike7 from "./bike7.png";
+import bike8 from "./bike8.png";
+import meetup from './meetup.png'
 
 export const assets = {
   Banner2,
@@ -32,6 +44,18 @@ export const assets = {
   Section1Image,
   Section2Image,
   Banner1Image,
+  playstore,
+  appstore,
+  phone,
+  bike1,
+  bike2,
+  bike3,
+  bike4,
+  bike5,
+  bike6,
+  bike7,
+  bike8,
+  meetup
 };
 
 export const secondHeroSection = [

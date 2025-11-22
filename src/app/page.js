@@ -8,6 +8,8 @@ import Brand from "../components/Brand";
 import CardSection from "../components/CardSection";
 import SecondBanner from "@/components/SecondBanner";
 import Contact from "@/components/Contact";
+import SocialMedia from "@/components/SocialMedia";
+import BikePoster from "@/components/BikePoster";
 
 export default function Page() {
   return (
@@ -36,6 +38,8 @@ export default function Page() {
       <CardSection />
       <SecondBanner />
       <Contact />
+      <SocialMedia />
+      <BikePoster />
     </>
   );
 }

@@ -100,7 +100,7 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     // Mark all fields as touched
     const allTouched = Object.keys(formData).reduce((acc, key) => {
       acc[key] = true;
@@ -132,7 +132,7 @@ function Contact() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto md:px-8 px-4 md:my-20 my-10">
+    <div className="max-w-7xl mx-auto md:px-8 px-4 md:mt-20 my-10">
       <div>
         <h1 className="text-black uppercase md:text-4xl text-xl text-center font-bold">
           REQUEST A QUOTE
@@ -211,7 +211,9 @@ function Contact() {
                     onChange={handleChange}
                     onBlur={handleBlur}
                     className="w-full px-4 py-2 bg-gray-100 border placeholder:text-gray-500 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition text-gray-500"
-                    style={{ color: formData.timeframe ? '#111827' : '#6B7280' }}
+                    style={{
+                      color: formData.timeframe ? "#111827" : "#6B7280",
+                    }}
                   >
                     <option value="">Select timeframe</option>
                     <option value="1-2 weeks">1-2 weeks</option>
@@ -238,7 +240,7 @@ function Contact() {
                     onChange={handleChange}
                     onBlur={handleBlur}
                     className="w-full px-4 bg-gray-100 py-2 border placeholder:text-gray-500 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition text-gray-500"
-                    style={{ color: formData.size ? '#111827' : '#6B7280' }}
+                    style={{ color: formData.size ? "#111827" : "#6B7280" }}
                   >
                     <option className="placeholder:text-gray-500" value="">
                       Select size
@@ -298,11 +300,11 @@ function Contact() {
                 )}
               </div>
               <p className="text-gray-700 text-base text-center">
-                By submitting this form you agree to our 
+                By submitting this form you agree to our
                 <span className="underline cursor-pointer hover:text-blue-700">
                   Terms of Service
                 </span>
-                 and 
+                and
                 <span className="underline cursor-pointer hover:text-blue-700">
                   Privacy Policy
                 </span>
@@ -310,9 +312,10 @@ function Contact() {
               </p>
               {/* Submit Button */}
               <div className="flex items-center justify-center">
-                <button 
+                <button
                   onClick={handleSubmit}
-                  className="  gap-2 text-white cursor-pointer font-semibold px-5 py-2 w-full sm:w-auto rounded bg-blue-700 flex items-center justify-center">
+                  className="  gap-2 text-white cursor-pointer font-semibold px-5 py-2 w-full sm:w-auto rounded bg-blue-700 flex items-center justify-center"
+                >
                   Lorem Ipsum <MoveRight />
                 </button>
               </div>
