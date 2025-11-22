@@ -1,5 +1,5 @@
 import React from "react";
-import { assets, secondHeroSection } from "../../../public/assets";
+import { assets, secondHeroSection } from "../../public/assets";
 import Image from "next/image";
 import { MoveRight, PhoneCall } from "lucide-react";
 

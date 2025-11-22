@@ -1,5 +1,5 @@
 import React from "react";
-import { assets, thirdSection } from "../../../public/assets";
+import { assets, thirdSection } from "../../public/assets";
 import Image from "next/image";
 
 function ThirdSection() {

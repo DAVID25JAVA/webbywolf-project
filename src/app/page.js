@@ -1,8 +1,11 @@
 // Page.jsx (or wherever you use both components)
-import Hero from "./components/HeroSection";
+import Hero from "../components/HeroSection";
 import { assets } from "../../public/assets";
-import SecondHeroSection from "./components/SecondHeroSection";
-import ThirdSection from "./components/ThirdSection";
+import SecondHeroSection from "../components/SecondHeroSection";
+import ThirdSection from "../components/ThirdSection";
+import Banner from "../components/Banner";
+import Brand from "../components/Brand";
+import CardSection from "../components/CardSection";
 
 export default function Page() {
   return (
@@ -26,6 +29,9 @@ export default function Page() {
       </div>
       <SecondHeroSection />
       <ThirdSection />
+      <Banner />
+      <Brand />
+      <CardSection />
     </>
   );
 }

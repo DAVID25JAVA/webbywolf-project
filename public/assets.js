@@ -6,12 +6,30 @@ import bullet from "./bullet.png";
 import Section1Image from "./Section1Image.png";
 import Section2Image from "./Section2Image.png";
 import icon1 from "./icon1.png";
+import Banner1Image from "./Banner1Image.png";
+import Hero from "./Hero.png";
+import Honda from "./Honda.png";
+import ktm from "./ktm.png";
+import Revolt from "./Revolt.png";
+import Ola from "./Ola.png";
+import Royal from "./Royal.png";
+import Tork from "./Tork.png";
+import Tvs from "./Tvs.png";
+import Ult from "./Ult.png";
+import yamaha from "./yamaha.png";
+import Ather from "./Ather.png";
+import Bajaj from "./Bajaj.png";
+import Frame1 from "./Frame1.png";
+import Frame2 from "./Frame2.png";
+import Frame3 from "./Frame3.png";
+import Frame4 from "./Frame4.png";
 
 export const assets = {
   HeroImage,
   circleCheck,
   Section1Image,
   Section2Image,
+  Banner1Image,
 };
 
 export const secondHeroSection = [
@@ -59,5 +77,99 @@ export const thirdSection = [
     description:
       "Lorem ipsum dolor sit amet consectetur. Eros egestas et arcu eu non viverra. Risus quam mattis senectus vitae interdum odio ornare gravida vestibulum. Donec turpis nulla felis mauris eu donec. Ipsum sit ut tortor.",
     img: icon1,
+  },
+];
+
+export const bikeBrand = [
+  {
+    id: 1,
+    name: "Hero",
+    img: Hero,
+  },
+  {
+    id: 2,
+    name: "Honda",
+    img: Honda,
+  },
+  {
+    id: 3,
+    name: "KTM",
+    img: ktm,
+  },
+  {
+    id: 4,
+    name: "Revolt",
+    img: Revolt,
+  },
+  {
+    id: 5,
+    name: "Ola",
+    img: Ola,
+  },
+  {
+    id: 6,
+    name: "Royal Enfield",
+    img: Royal,
+  },
+  {
+    id: 7,
+    name: "Tork",
+    img: Tork,
+  },
+  {
+    id: 8,
+    name: "TVS",
+    img: Tvs,
+  },
+  {
+    id: 9,
+    name: "Ultraviolette",
+    img: Ult,
+  },
+  {
+    id: 10,
+    name: "Yamaha",
+    img: yamaha,
+  },
+  {
+    id: 11,
+    name: "Yamaha",
+    img: Ather,
+  },
+  {
+    id: 12,
+    name: "Yamaha",
+    img: Bajaj,
+  },
+];
+
+export const bikeHighlights = [
+  {
+    id: 1,
+    img: Frame4,
+    title: "Lorem ipsum dolor sit amet consectetur.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Nunc gravida consequat faucibus cursus nisi. Nunc montes molestie a vitae vulputate. Phasellus in pulvinar et vitae. Mi eget lectus nec et. Libero iaculis diam nam mauris a eget. Quam nibh rhoncus rhoncus enim venenatis bibendum.",
+  },
+  {
+    id: 2,
+    img: Frame3,
+    title: "Lorem ipsum dolor sit amet consectetur.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Nunc gravida consequat faucibus cursus nisi. Nunc montes molestie a vitae vulputate. Phasellus in pulvinar et vitae. Mi eget lectus nec et. Libero iaculis diam nam mauris a eget. Quam nibh rhoncus rhoncus enim venenatis bibendum.",
+  },
+  {
+    id: 3,
+    img: Frame2,
+    title: "Lorem ipsum dolor sit amet consectetur.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Nunc gravida consequat faucibus cursus nisi. Nunc montes molestie a vitae vulputate. Phasellus in pulvinar et vitae. Mi eget lectus nec et. Libero iaculis diam nam mauris a eget. Quam nibh rhoncus rhoncus enim venenatis bibendum.",
+  },
+  {
+    id: 4,
+    img: Frame1,
+    title: "Lorem ipsum dolor sit amet consectetur.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Nunc gravida consequat faucibus cursus nisi. Nunc montes molestie a vitae vulputate. Phasellus in pulvinar et vitae. Mi eget lectus nec et. Libero iaculis diam nam mauris a eget. Quam nibh rhoncus rhoncus enim venenatis bibendum.",
   },
 ];
