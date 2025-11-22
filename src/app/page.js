@@ -10,6 +10,7 @@ import SecondBanner from "@/components/SecondBanner";
 import Contact from "@/components/Contact";
 import SocialMedia from "@/components/SocialMedia";
 import BikePoster from "@/components/BikePoster";
+import Meetup from "@/components/Meetup";
 
 export default function Page() {
   return (
@@ -40,6 +41,7 @@ export default function Page() {
       <Contact />
       <SocialMedia />
       <BikePoster />
+      <Meetup />
     </>
   );
 }
