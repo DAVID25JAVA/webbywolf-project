@@ -8,6 +8,7 @@ function Banner() {
       className={` bg-cover bg-center bg-no-repeat md:h-screen h-full w-full`}
       style={{ backgroundImage: `url('/Banner1Image.png')` }}
     >
+      <div className="absolute inset-0 bg-black/30"></div>
       <div className="max-w-7xl mx-auto px-8 py-8">
         <button className="font-bold text-xl bg-gray-300 text-black px-6 uppercase py-2">
           Logo

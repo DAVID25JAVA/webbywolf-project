@@ -23,8 +23,10 @@ import Frame1 from "./Frame1.png";
 import Frame2 from "./Frame2.png";
 import Frame3 from "./Frame3.png";
 import Frame4 from "./Frame4.png";
+import Banner2 from './Banner2.png'
 
 export const assets = {
+  Banner2,
   HeroImage,
   circleCheck,
   Section1Image,
