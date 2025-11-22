@@ -7,6 +7,7 @@ import Banner from "../components/Banner";
 import Brand from "../components/Brand";
 import CardSection from "../components/CardSection";
 import SecondBanner from "@/components/SecondBanner";
+import Contact from "@/components/Contact";
 
 export default function Page() {
   return (
@@ -34,6 +35,7 @@ export default function Page() {
       <Brand />
       <CardSection />
       <SecondBanner />
+      <Contact />
     </>
   );
 }
