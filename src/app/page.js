@@ -2,28 +2,30 @@
 import Hero from "./components/HeroSection";
 import { assets } from "../../public/assets";
 import SecondHeroSection from "./components/SecondHeroSection";
+import ThirdSection from "./components/ThirdSection";
 
 export default function Page() {
   return (
     <>
-    <div className="  min-h-screen">
-      {/* Hero Image Background - Positioned absolutely */}
-      <div
-        className="absolute md:block hidden top-0 right-0 overflow-hidden w-[50%] h-full "
-        style={{
-          clipPath: "polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)",
-          backgroundImage: `url(${assets?.HeroImage?.src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          width: "full",
-          zIndex: 0,
-        }}
-      />
+      <div className="md:min-h-screen">
+        {/* Hero Image Background - Positioned absolutely */}
+        <div
+          className="absolute md:block hidden top-0 right-0 overflow-hidden w-[50%] h-full "
+          style={{
+            clipPath: "polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            backgroundImage: `url(${assets?.HeroImage?.src})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            width: "full",
+            zIndex: 0,
+          }}
+        />
 
-      {/* Components */}
-      <Hero />
-    </div>
-    <SecondHeroSection />
+        {/* Components */}
+        <Hero />
+      </div>
+      <SecondHeroSection />
+      <ThirdSection />
     </>
   );
 }
