@@ -42,7 +42,7 @@ function Meetup() {
               </div>
             </div>
 
-            <button className="flex items-center gap-2 text-white bg-blue-700 hover:bg-blue-600 px-3 py-1 mt-8">
+            <button className="flex mb-12 sm:mb-10 md:mb-0 items-center gap-2 text-white bg-blue-700 hover:bg-blue-600 px-3 py-1 mt-8">
               Lorem Ipsum <MoveRight />
             </button>
           </div>

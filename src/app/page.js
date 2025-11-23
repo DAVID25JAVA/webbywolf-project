@@ -11,6 +11,8 @@ import Contact from "@/components/Contact";
 import SocialMedia from "@/components/SocialMedia";
 import BikePoster from "@/components/BikePoster";
 import Meetup from "@/components/Meetup";
+import Friend from "@/components/Friend";
+import Testimonial from "@/components/Testimonial";
 
 export default function Page() {
   return (
@@ -42,6 +44,8 @@ export default function Page() {
       <SocialMedia />
       <BikePoster />
       <Meetup />
+      <Friend />
+      <Testimonial />
     </>
   );
 }

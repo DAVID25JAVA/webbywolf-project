@@ -35,7 +35,10 @@ import bike5 from "./bike5.png";
 import bike6 from "./bike6.png";
 import bike7 from "./bike7.png";
 import bike8 from "./bike8.png";
-import meetup from './meetup.png'
+import meetup from "./meetup.png";
+import rider from "./rider.png";
+import hands from "./hands.png";
+import frined from "./friend.png";
 
 export const assets = {
   Banner2,
@@ -55,7 +58,10 @@ export const assets = {
   bike6,
   bike7,
   bike8,
-  meetup
+  meetup,
+  frined,
+  rider,
+  hands,
 };
 
 export const secondHeroSection = [
