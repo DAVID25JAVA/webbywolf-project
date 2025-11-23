@@ -1,4 +1,4 @@
-// Page.jsx (or wherever you use both components)
+ "use client";
 import Hero from "../components/HeroSection";
 import { assets } from "../../public/assets";
 import SecondHeroSection from "../components/SecondHeroSection";
@@ -18,26 +18,32 @@ import Review from "@/components/Review";
 import Customer from "@/components/Customer";
 import Poster from "@/components/Poster";
 
+import { motion } from "framer-motion";
+
 export default function Page() {
   return (
     <>
-      <div className="md:min-h-screen">
-        {/* Hero Image Background - Positioned absolutely */}
-        <div
-          className="absolute md:block hidden top-0 right-0 overflow-hidden w-[50%] h-full "
+      <div className="md:min-h-screen relative">
+        {/* Hero Image Background - With Animation */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="absolute md:block hidden top-0 right-0 overflow-hidden w-[50%] h-full"
           style={{
             clipPath: "polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)",
             backgroundImage: `url(${assets?.HeroImage?.src})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            width: "full",
             zIndex: 1,
           }}
         />
 
-        {/* Components */}
+        {/* Hero Section */}
         <Hero />
       </div>
+
+      {/* Remaining Sections */}
       <SecondHeroSection />
       <ThirdSection />
       <Banner />

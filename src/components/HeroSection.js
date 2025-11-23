@@ -2,12 +2,18 @@
 import React from "react";
 import { assets } from "../../public/assets";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <main className="relative flex flex-col md:flex-row flex-1 items-center justify-between px-4 md:px-9 py-10 md:py-20 md:space-x-12 gap-8 max-w-7xl mx-auto z-10">
+    <main className="relative  flex flex-col md:flex-row flex-1 items-center justify-between px-4 md:px-9 py-10 md:py-20 md:space-x-12 gap-8 max-w-7xl mx-auto z-10">
       {/* Left Content */}
-      <div className="w-full md:max-w-lg mt-20 md:pb-56">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="w-full md:max-w-lg mt-20 md:pb-56"
+      >
         <h1 className="text-4xl font-bold text-black mb-4">
           Lorem ipsum dolor sit amet
         </h1>
@@ -41,7 +47,7 @@ export default function Hero() {
           />
           <span>No credit required!</span>
         </div>
-      </div>
+      </motion.div>
     </main>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { bikeHighlights } from "../../public/assets";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 function CardSection() {
   return (
@@ -22,31 +23,32 @@ function CardSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-2 grid-cols-1 gap-8 py-8 max-w-4xl mx-auto">
           {bikeHighlights?.map((data) => (
-            <div
-              key={data?.id}
+            <motion.div
+              key={data.id}
               className="w-full shadow-lg rounded-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: true }}
             >
               <div className="w-full h-64 relative">
-                <Image
-                  alt="img"
-                  src={data?.img}
-                  fill
-                  className="object-cover"
-                />
+                <Image alt="img" src={data.img} fill className="object-cover" />
               </div>
               <div className="p-5">
                 <p className="text-black text-lg font-semibold mb-2">
-                  {data?.title}
+                  {data.title}
                 </p>
-                <p className="text-base text-gray-700 pb-4">{data?.description}</p>
-                <Link href="/"
-                   
+                <p className="text-base text-gray-700 pb-4">
+                  {data.description}
+                </p>
+                <Link
+                  href="/"
                   className="text-blue-600 cursor-pointer hover:text-blue-800 font-semibold underline transition-all duration-200"
                 >
                   Learn more
                 </Link>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

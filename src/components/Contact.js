@@ -1,9 +1,9 @@
 "use client";
 import { MoveRight } from "lucide-react";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import { motion } from "framer-motion"; // 👈 Import Framer Motion
 
-// Yup-style validation schema
+// Validation Schema (same as your existing)
 const validationSchema = {
   name: (value) => {
     if (!value) return "Name is required";
@@ -62,8 +62,6 @@ function Contact() {
       ...prev,
       [name]: value,
     }));
-
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors((prev) => ({
         ...prev,
@@ -78,8 +76,6 @@ function Contact() {
       ...prev,
       [name]: true,
     }));
-
-    // Validate on blur
     const error = validationSchema[name](value);
     setErrors((prev) => ({
       ...prev,
@@ -100,23 +96,18 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Mark all fields as touched
     const allTouched = Object.keys(formData).reduce((acc, key) => {
       acc[key] = true;
       return acc;
     }, {});
     setTouched(allTouched);
 
-    // Validate all fields
     const newErrors = validateForm();
     setErrors(newErrors);
 
-    // If no errors, submit
     if (Object.keys(newErrors).length === 0) {
       console.log("Form submitted:", formData);
       alert("Form submitted successfully!");
-      // Reset form
       setFormData({
         name: "",
         email: "",
@@ -134,19 +125,38 @@ function Contact() {
   return (
     <div className="max-w-7xl mx-auto md:px-8 px-4 md:mt-20 my-10">
       <div>
-        <h1 className="text-black uppercase md:text-4xl text-xl text-center font-bold">
+        {/* 🟩 Heading Animation */}
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="text-black uppercase md:text-4xl text-xl text-center font-bold"
+        >
           REQUEST A QUOTE
-        </h1>
+        </motion.h1>
 
-        <div className="min-h-screen py-12 md:px-4">
-          <div className="md:max-w-4xl mx-auto bg-white rounded-2xl shadow-xl md:p-8 p-4">
+        {/* 🟩 Container Animation */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="min-h-screen py-12 md:px-4"
+        >
+          {/* 🟩 Form Card Animation */}
+          <motion.div
+            className="md:max-w-4xl mx-auto bg-white rounded-2xl shadow-xl md:p-8 p-4"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             <div className="space-y-6">
-              {/* Two fields in one row */}
+              {/* Input Fields */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Name
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
                   <input
                     type="text"
                     name="name"
@@ -160,18 +170,15 @@ function Contact() {
                     <p className="text-red-500 text-sm mt-1">{errors.name}</p>
                   )}
                 </div>
-
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Email
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className="w-full px-4 py-2 border text-gray-800 bg-gray-100 placeholder:text-gray-500 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition"
+                    className="w-full px-4 py-2 border bg-gray-100 text-gray-800 placeholder:text-gray-500 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition"
                     placeholder="your.email@example.com"
                   />
                   {touched.email && errors.email && (
@@ -181,39 +188,30 @@ function Contact() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Phone Number */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Phone Number
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
                   <input
                     type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className="w-full px-4 py-2 text-gray-800 bg-gray-100 border placeholder:text-gray-500 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition"
-                    placeholder="+1 (555) 000-0000"
+                    className="w-full px-4 py-2 bg-gray-100 text-gray-800 placeholder:text-gray-500 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition"
                   />
                   {touched.phone && errors.phone && (
                     <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
                   )}
                 </div>
 
-                {/* Timeframe */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Timeframe
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Timeframe</label>
                   <select
                     name="timeframe"
                     value={formData.timeframe}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className="w-full px-4 py-2 bg-gray-100 border placeholder:text-gray-500 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition text-gray-500"
-                    style={{
-                      color: formData.timeframe ? "#111827" : "#6B7280",
-                    }}
+                    className="w-full px-4 py-2 bg-gray-100 placeholder:text-gray-500 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition"
+                    style={{ color: formData.timeframe ? "#111827" : "#6B7280" }}
                   >
                     <option value="">Select timeframe</option>
                     <option value="1-2 weeks">1-2 weeks</option>
@@ -222,29 +220,23 @@ function Contact() {
                     <option value="3+ months">3+ months</option>
                   </select>
                   {touched.timeframe && errors.timeframe && (
-                    <p className="text-red-500 text-sm mt-1">
-                      {errors.timeframe}
-                    </p>
+                    <p className="text-red-500 text-sm mt-1">{errors.timeframe}</p>
                   )}
                 </div>
               </div>
 
+              {/* More Inputs */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Size
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Size</label>
                   <select
                     name="size"
                     value={formData.size}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className="w-full px-4 bg-gray-100 py-2 border placeholder:text-gray-500 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition text-gray-500"
-                    style={{ color: formData.size ? "#111827" : "#6B7280" }}
+                    className="w-full px-4 py-2 bg-gray-100 border placeholder:text-gray-500 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition"
                   >
-                    <option className="placeholder:text-gray-500" value="">
-                      Select size
-                    </option>
+                    <option value="">Select size</option>
                     <option value="Small">Small</option>
                     <option value="Medium">Medium</option>
                     <option value="Large">Large</option>
@@ -255,29 +247,23 @@ function Contact() {
                   )}
                 </div>
 
-                {/* Quantity */}
                 <div>
-                  <label className="block text-sm  font-medium text-gray-700 mb-2">
-                    Quantity
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Quantity</label>
                   <input
                     type="number"
                     name="quantity"
                     value={formData.quantity}
                     onChange={handleChange}
                     onBlur={handleBlur}
+                    className="w-full px-4 py-2 bg-gray-100 placeholder:text-gray-500 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition"
                     min="1"
-                    className="w-full px-4 text-gray-800 bg-gray-100 py-2 border placeholder:text-gray-500 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition"
                     placeholder="Enter quantity"
                   />
                   {touched.quantity && errors.quantity && (
-                    <p className="text-red-500 text-sm mt-1">
-                      {errors.quantity}
-                    </p>
+                    <p className="text-red-500 text-sm mt-1">{errors.quantity}</p>
                   )}
                 </div>
               </div>
-              {/* Size */}
 
               {/* Description */}
               <div>
@@ -294,34 +280,35 @@ function Contact() {
                   placeholder="Tell us about your project requirements..."
                 />
                 {touched.description && errors.description && (
-                  <p className="text-red-500 text-sm mt-1">
-                    {errors.description}
-                  </p>
+                  <p className="text-red-500 text-sm mt-1">{errors.description}</p>
                 )}
               </div>
+
               <p className="text-gray-700 text-base text-center">
-                By submitting this form you agree to our {" "}
-                <span className="underline cursor-pointer hover:text-blue-700">
-                  Terms of Service{" "}
-                </span>
-                and {" "}
-                <span className="underline cursor-pointer hover:text-blue-700">
-                  Privacy Policy
-                </span>
-                .
+                By submitting this form you agree to our{" "}
+                <span className="underline cursor-pointer hover:text-blue-700">Terms of Service</span>{" "}
+                and{" "}
+                <span className="underline cursor-pointer hover:text-blue-700">Privacy Policy</span>.
               </p>
-              {/* Submit Button */}
-              <div className="flex items-center justify-center">
+
+              {/* 🟦 Button Animation */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="flex items-center justify-center"
+              >
                 <button
                   onClick={handleSubmit}
-                  className="  gap-2 text-white cursor-pointer font-semibold px-5 py-2 w-full sm:w-auto rounded bg-blue-700 flex items-center justify-center"
+                  className="gap-2 text-white cursor-pointer font-semibold px-5 py-2 w-full sm:w-auto rounded bg-blue-700 flex items-center justify-center"
                 >
                   Lorem Ipsum <MoveRight />
                 </button>
-              </div>
+              </motion.div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );

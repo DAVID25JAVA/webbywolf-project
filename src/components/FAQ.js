@@ -11,17 +11,36 @@ function FAQ() {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
+  // Animation variants
+  const fadeUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <div className="bg-gray-100 py-5 md:mt-20 mt-14">
       <div className="max-w-7xl mx-auto md:px-8 px-4">
-        <h1 className="uppercase text-gray-800 font-extrabold md:text-3xl text-xl">
+        {/* Heading animation */}
+        <motion.h1
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="uppercase text-gray-800 font-extrabold md:text-3xl text-xl"
+        >
           FREQUENTLY ASKED QUESTIONS (FAQs)
-        </h1>
+        </motion.h1>
 
         <div className="pt-14">
           {faqData?.map((data, index) => (
-            <div
+            <motion.div
               key={index}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
               className="py-6 px-6 border-t-2 border-gray-600 cursor-pointer"
               onClick={() => toggleFAQ(index)}
             >
@@ -36,7 +55,7 @@ function FAQ() {
                 )}
               </div>
 
-              {/* Animation for answer */}
+              {/* Smooth toggle answer */}
               <AnimatePresence>
                 {activeIndex === index && (
                   <motion.p
@@ -50,7 +69,7 @@ function FAQ() {
                   </motion.p>
                 )}
               </AnimatePresence>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
