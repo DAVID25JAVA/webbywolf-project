@@ -39,8 +39,24 @@ import meetup from "./meetup.png";
 import rider from "./rider.png";
 import hands from "./hands.png";
 import frined from "./friend.png";
+import watch from "./watch.png";
+import cloud from "./cloud.png";
+import star from "./star.png";
+import star1 from "./star1.png";
+import user1 from "./user1.png";
+import user2 from "./user2.png";
+import user3 from "./user3.png";
+import user4 from "./user4.png";
 
 export const assets = {
+  star1,
+  watch,
+  cloud,
+  star,
+  user1,
+  user2,
+  user3,
+  user4,
   Banner2,
   HeroImage,
   circleCheck,
@@ -203,5 +219,64 @@ export const bikeHighlights = [
     title: "Lorem ipsum dolor sit amet consectetur.",
     description:
       "Lorem ipsum dolor sit amet consectetur. Nunc gravida consequat faucibus cursus nisi. Nunc montes molestie a vitae vulputate. Phasellus in pulvinar et vitae. Mi eget lectus nec et. Libero iaculis diam nam mauris a eget. Quam nibh rhoncus rhoncus enim venenatis bibendum.",
+  },
+];
+
+export const faqData = [
+  {
+    question: "What services do you offer?",
+    answer:
+      "We provide end-to-end web development services including research, planning, UI/UX design, frontend development, and performance optimization.",
+  },
+  {
+    question: "How long does it take to complete a project?",
+    answer:
+      "The timeline depends on the project scope. On average, small projects take 1–2 weeks, while larger projects can take 4–6 weeks or more.",
+  },
+  {
+    question: "Do you offer post-development support?",
+    answer:
+      "Yes, we provide ongoing maintenance, updates, bug fixes, and performance enhancements even after project delivery.",
+  },
+  {
+    question: "What technologies do you work with?",
+    answer:
+      "We specialize in React.js, Next.js, JavaScript, Tailwind CSS, and modern frontend frameworks. We also integrate backend systems where required.",
+  },
+  {
+    question: "How can I get started with a project?",
+    answer:
+      "You can contact us with your requirements. We’ll analyze your needs, propose a plan, and begin the development process after approval.",
+  },
+];
+
+export const reviewData = [
+  {
+    user: "Jane Cooper",
+    img: user1,
+     icon: cloud,
+    review:
+      "The platform helped streamline my project workflow and improved communication. Highly recommended!",
+  },
+  {
+    user: "Ralph Edwards",
+    img: user2,
+    icon: star1,
+    review:
+      "Excellent user experience with great support. The UI is clean and responsive. Would definitely use again!",
+  },
+  {
+    user: "Courtney Henry",
+    img: user3,
+    icon: star,
+    review:
+      "A smooth and efficient platform for collaboration. Tasks were completed on time thanks to great features.",
+  },
+  {
+    user: "Cameron",
+    img: user4,
+    icon: watch,
+    review:
+      "Very helpful dashboard and simple navigation. The tool boosted productivity for our team project.",
   },
 ];
