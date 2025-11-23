@@ -46,7 +46,7 @@ const NoLimitsSectionAdjusted = () => {
 
         {/* --- 2. Right Image Collage Area (Spans 6 columns on large screens) --- */}
         {/* Adjusted to 6 columns for better spacing control based on your grid */}
-        <div className="lg:col-span-6 grid grid-cols-6 grid-rows-6 gap-3 sm:gap-4 md:h-[600px] w-full relative">
+        <div className="lg:col-span-6 grid grid-cols-6 md:grid-rows-6 gap-3 sm:gap-4 md:h-[600px] w-full relative">
           {/* Top-most Left Image (bike1) - MODIFIED: Taller and Narrower */}
           <div className="col-span-1 row-span-3 md:mt-4 overflow-hidden rounded-lg hidden md:block  ">
             <img
@@ -77,21 +77,21 @@ const NoLimitsSectionAdjusted = () => {
           {/* Bottom right smaller image (bike 7) */}
           {/* <div className='mt-22 '> */}
 
-          <div className="col-span-2">
+          <div className="col-span-2 hidden md:block">
             <img
               src={assets?.bike7?.src}
               alt="Close-up of bike parts"
-              className=" w-full h-full object-center mt-32 hidden md:block "
+              className=" w-full h-full object-center mt-32   "
             />
           </div>
 
           {/* Bottom Large Image (Back View on Road - bike 8) */}
 
-          <div className="col-span-4   ">
+          <div className="col-span-4 hidden md:block  ">
             <img
               src={assets?.bike8?.src}
               alt="Bikers from the back view on a road"
-              className="w-full h-full object-center md:mt-32 hidden md:block"
+              className="w-full h-full object-center md:mt-32  "
             />
           </div>
 
@@ -100,7 +100,7 @@ const NoLimitsSectionAdjusted = () => {
       </div>
 
       {/* --- Footer element visible in the screenshot, positioned below the main grid --- */}
-      <div className="max-w-7xl mx-auto h- 16 bg-white border-t border-gray-100 -mt-2.5">
+      <div className="max-w-7xl mx-a uto h- 16 bg-white border-t border-gray-100 -mt-2.5">
         {/* Placeholder for the thin white bar at the bottom */}
       </div>
     </div>
