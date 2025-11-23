@@ -4,7 +4,7 @@ import Image from "next/image";
 import { MoveRight, PhoneCall } from "lucide-react";
 
 function SecondHeroSection() {
-  console.log(secondHeroSection);
+   
 
   return (
     <div className="max-w-7xl mx-auto md:px-4 ">

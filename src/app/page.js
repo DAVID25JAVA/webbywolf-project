@@ -31,7 +31,7 @@ export default function Page() {
             backgroundSize: "cover",
             backgroundPosition: "center",
             width: "full",
-            zIndex: 0,
+            zIndex: 1,
           }}
         />
 

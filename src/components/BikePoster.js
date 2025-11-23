@@ -6,7 +6,7 @@ import { MoveRight } from "lucide-react";
 const NoLimitsSectionAdjusted = () => {
   return (
     // Outer container with light background and padding
-    <div className="bg-gray-50 pt-20 pb-56 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gray-50 pt-20 pb-[140px] px-4  md:px-8">
       {/* Grid container for the main layout (text + image collage) */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
         {/* --- 1. Left Content Area (Text + Small Vertical Image) --- */}
@@ -14,7 +14,7 @@ const NoLimitsSectionAdjusted = () => {
           <p className="text-sm font-bold tracking-widest text-gray-700 uppercase mb-3">
             NO LIMITS
           </p>
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-gray-900 mb-6 leading-tight">
             LOREM IPSUM DOLOR SIT AMET
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-lg pr-12">

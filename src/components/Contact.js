@@ -300,11 +300,11 @@ function Contact() {
                 )}
               </div>
               <p className="text-gray-700 text-base text-center">
-                By submitting this form you agree to our
+                By submitting this form you agree to our {" "}
                 <span className="underline cursor-pointer hover:text-blue-700">
-                  Terms of Service
+                  Terms of Service{" "}
                 </span>
-                and
+                and {" "}
                 <span className="underline cursor-pointer hover:text-blue-700">
                   Privacy Policy
                 </span>
