@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "embla-carousel-autoplay": "^8.6.0",
+    "embla-carousel-react": "^8.6.0",
     "formik": "^2.4.9",
     "lucide-react": "^0.554.0",
     "motion": "^12.23.24",

@@ -4,8 +4,8 @@ import { assets } from "../../public/assets";
 
 function SocialMedia() {
   return (
-    <div className="bg-gray-100 md:py-4">
-      <div className="px-8 max-w-7xl mx-auto md:mt-20 my-10 ">
+    <div className="bg-gray-100 md:py-4 py-2">
+      <div className="px-8 max-w-7xl mx-auto md:mt-16 my-10 ">
         <div className="grid grid-cols-1 md:grid-cols-2 place-items-center grid-flow-dense gap-8 md:gap-0 ">
           <div>
             <p className="text-base text-blue-600 font-semibold">Lorem Ipsum</p>

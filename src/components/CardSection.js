@@ -5,7 +5,7 @@ import Link from "next/link";
 
 function CardSection() {
   return (
-    <div className="my-10 px-8 max-w-7xl mx-auto">
+    <div className="my-10 md:px-8 px-4 max-w-7xl mx-auto">
       <div>
         <p className="text-base text-blue-600 font-semibold">
           Lorem ipsum dolor sit
@@ -38,7 +38,7 @@ function CardSection() {
                 <p className="text-black text-lg font-semibold mb-2">
                   {data?.title}
                 </p>
-                <p className="text-sm text-gray-700 pb-4">{data?.description}</p>
+                <p className="text-base text-gray-700 pb-4">{data?.description}</p>
                 <Link href="/"
                    
                   className="text-blue-600 cursor-pointer hover:text-blue-800 font-semibold underline transition-all duration-200"

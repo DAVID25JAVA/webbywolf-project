@@ -8,27 +8,27 @@ function SecondHeroSection() {
 
   return (
     <div className="max-w-7xl mx-auto md:px-4 ">
-      <div className="relative mx-5 shadow-[0px_0px_10px_rgba(0,0,0,0.3)] p-5 md:py-14 bg-white rounded-xl">
+      <div className="relative mx-5 shadow-[0px_0px_10px_rgba(0,0,0,0.3)] md:p-5 px-3 py-5  md:py-14 mt-10 md:mt-0 bg-white rounded-xl">
         {/* Gradient Bottom Border */}
         <div className="absolute left-0 bottom-0 h-6 w-full   bg-linear-to-r from-blue-900 via-green-500 to-purple-900"></div>
 
-        <p className="text-base text-blue-600 font-semibold">
+        <p className="text-lg text-blue-600 font-semibold">
           Lorem ipsum dolor sit
         </p>
         <div className="flex justify-between gap-5 items-center mt-1">
           {/* left side content */}
           <div className="md:w-[50%] w-full">
-            <h1 className="mt-2 text-black md:text-3xl text-xl tracking-tight md:tracking-normal font-bold w-xs uppercase leading-10">
+            <h1 className="mt-2 text-black md:text-3xl text-xl tracking-tight md:tracking-normal font-bold w-xs uppercase ">
               Lorem ipsum dolor sit amet
             </h1>
-            <p className="text-gray-700 leading-7 pt-3">
+            <p className="text-gray-700 md:leading-7 pt-3">
               Lorem ipsum dolor sit amet consectetur. Amet sodales sociis
               facilisis donec dui. Mi porttitor ut aliquam mattis maecenas eget
               integer in nam. Non nisl iaculis at felis aliquet. Hendrerit
               tellus at purus lectus.
             </p>
             {secondHeroSection?.map((item) => (
-              <div key={item?.id} className="flex items-center gap-3">
+              <div key={item?.id} className="flex items-center gap-3 pt-2 md:pt-3">
                 <Image
                   alt="img"
                   src={item?.img}

@@ -1,15 +1,13 @@
 import React from "react";
 import { assets } from "../../public/assets";
 import { MoveRight } from "lucide-react";
-// import Image from 'next/image'; // Use this for production Next.js
 
 const NoLimitsSectionAdjusted = () => {
   return (
-    // Outer container with light background and padding
-    <div className="bg-gray-50 pt-20 pb-[140px] px-4  md:px-8">
+    
+    <div className="bg-gray-50 pt-20 md:pb-[150px] pb- [100px] px-4  md:px-8">
       {/* Grid container for the main layout (text + image collage) */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
-        {/* --- 1. Left Content Area (Text + Small Vertical Image) --- */}
         <div className="lg:col-span-6 flex flex-col justify-start pt-4 pb-8 relative">
           <p className="text-sm font-bold tracking-widest text-gray-700 uppercase mb-3">
             NO LIMITS
@@ -26,8 +24,6 @@ const NoLimitsSectionAdjusted = () => {
             <MoveRight />
           </button>
 
-          {/* Vertical Image (Absolutely positioned next to the text block) */}
-          {/* Note: top-[100px] positions the image vertically */}
           <div className="absolute md:top-[200px] right-0 w-[140px] h-[250px] overflow-hidden hidden lg:block">
             <img
               src={assets?.bike3?.src}
@@ -44,8 +40,6 @@ const NoLimitsSectionAdjusted = () => {
           </div>
         </div>
 
-        {/* --- 2. Right Image Collage Area (Spans 6 columns on large screens) --- */}
-        {/* Adjusted to 6 columns for better spacing control based on your grid */}
         <div className="lg:col-span-6 grid grid-cols-6 md:grid-rows-6 gap-3 sm:gap-4 md:h-[600px] w-full relative">
           {/* Top-most Left Image (bike1) - MODIFIED: Taller and Narrower */}
           <div className="col-span-1 row-span-3 md:mt-4 overflow-hidden rounded-lg hidden md:block  ">
@@ -56,8 +50,7 @@ const NoLimitsSectionAdjusted = () => {
             />
           </div>
 
-          {/* Top-most Right Image (bike2) - MODIFIED: Taller and Wider */}
-          <div className="md:col-span-5 md:row-span-3 mt-4 overflow-hidden rounded-lg  ">
+          <div className="md:col-span-5 md:row-span-3 md:mt-4 overflow-hidden rounded-lg  ">
             <img
               src={assets?.bike2?.src}
               alt="Night motorcycle headlights"
@@ -65,8 +58,7 @@ const NoLimitsSectionAdjusted = () => {
             />
           </div>
 
-          {/* Middle/Bottom Large Image (Sunset Cliff View) */}
-          <div className="col-span-6 row-span-2 mt-22 md:mt-2 md:h-80 h-full  pb-5  ">
+          <div className="col-span-6 row-span-2 mt-[165px] md:mt-2 md:h-80 h-48 md:pb-5 ">
             <img
               src={assets?.bike4?.src}
               alt="Bikers watching a sunset over a cliff"
@@ -85,8 +77,6 @@ const NoLimitsSectionAdjusted = () => {
             />
           </div>
 
-          {/* Bottom Large Image (Back View on Road - bike 8) */}
-
           <div className="col-span-4 hidden md:block  ">
             <img
               src={assets?.bike8?.src}
@@ -99,7 +89,6 @@ const NoLimitsSectionAdjusted = () => {
         </div>
       </div>
 
-      {/* --- Footer element visible in the screenshot, positioned below the main grid --- */}
       <div className="max-w-7xl mx-a uto h- 16 bg-white border-t border-gray-100 -mt-2.5">
         {/* Placeholder for the thin white bar at the bottom */}
       </div>
