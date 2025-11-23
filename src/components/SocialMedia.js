@@ -9,7 +9,6 @@ function SocialMedia() {
     <div className="bg-gray-100 md:py-4 py-2">
       <div className="px-8 max-w-7xl mx-auto md:mt-16 my-10 ">
         <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-8 md:gap-0">
-
           {/* Left Side Content */}
           <motion.div
             initial={{ opacity: 0, x: -80 }}
