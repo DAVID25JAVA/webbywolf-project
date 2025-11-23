@@ -15,6 +15,8 @@ import Friend from "@/components/Friend";
 import Testimonial from "@/components/Testimonial";
 import FAQ from "@/components/FAQ";
 import Review from "@/components/Review";
+import Customer from "@/components/Customer";
+import Poster from "@/components/Poster";
 
 export default function Page() {
   return (
@@ -48,6 +50,8 @@ export default function Page() {
       <Meetup />
       <Review />
       <Friend />
+      <Customer />
+      <Poster />
       <FAQ />
       <Testimonial />
     </>
