@@ -29,7 +29,7 @@ function Banner() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-white font-bold md:text-4xl text-2xl text-center py-8 uppercase md:leading-12"
+          className=" heading text-white text-center py-8 uppercase md:leading-12"
         >
           Lorem ipsum dolor sit amet consectetur. Quis <br /> adipiscing purus
           egestas aliquam viverra mi.

@@ -44,25 +44,25 @@ export default function Navbar() {
       }`}
     >
       <div className="flex items-center justify-between px-4 md:px-8 py-4 max-w-7xl mx-auto">
-        {/* Logo */}
+        {/* Logo - Using heading font */}
         <motion.div
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="font-bold text-xl bg-gray-300 text-black px-4 py-2"
+          className="font-heading font-bold text-xl bg-gray-300 text-[--color-text-primary] px-4 py-2"
         >
           LOGO
         </motion.div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6 lg:pr-28 text-blue-700 text-sm font-semibold">
+        {/* Desktop Navigation - Using primary color */}
+        <nav className="hidden md:flex space-x-6 lg:pr-28 text-[--color-primary] text-sm font-semibold font-body">
           {menuItems?.map((item, index) => (
             <motion.div
               key={item?.id}
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-              className="flex items-center gap-0.5 cursor-pointer hover:text-blue-900"
+              className="flex items-center gap-0.5 text-primary cursor-pointer hover:text-[--color-primary-dark] transition-colors"
             >
               <span>{item?.items}</span>
               <p>{item?.icon}</p>
@@ -78,7 +78,7 @@ export default function Navbar() {
             transition={{ duration: 0.5, delay: 0.6 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className={`bg-white rounded px-6 py-1.5 text-gray-700 font-bold hover:bg-gray-100 ${
+            className={`bg-white rounded px-6 py-1.5 text-[--color-text-primary] font-bold font-body hover:bg-gray-100 ${
               isScrolled ? "shadow-xl" : ""
             }`}
           >
@@ -86,12 +86,12 @@ export default function Navbar() {
           </motion.button>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button - Using primary color */}
         <motion.button
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="md:hidden text-blue-700"
+          className="md:hidden text-[--color-primary]"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -114,7 +114,7 @@ export default function Navbar() {
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
-                className="flex items-center gap-0.5 text-blue-700 font-semibold cursor-pointer hover:text-blue-900"
+                className="flex items-center gap-0.5 text-primary font-semibold font-body cursor-pointer hover:text-[--color-primary-dark] transition-colors"
               >
                 <span>{item?.items}</span>
                 <p>{item?.icon}</p>
@@ -124,7 +124,7 @@ export default function Navbar() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.3, delay: 0.3 }}
-              className="bg-white border border-gray-300 rounded px-6 py-2 text-gray-700 font-bold hover:bg-gray-100 w-full"
+              className="bg-white border border-gray-300 rounded px-6 py-2 text-[--color-text-primary] font-bold font-body hover:bg-gray-100 w-full"
             >
               Sign In
             </motion.button>

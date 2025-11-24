@@ -1,4 +1,4 @@
- "use client";
+"use client";
 import Hero from "../components/HeroSection";
 import { assets } from "../../public/assets";
 import SecondHeroSection from "../components/SecondHeroSection";
@@ -24,7 +24,6 @@ export default function Page() {
   return (
     <>
       <div className="md:min-h-screen relative">
-        {/* Hero Image Background - With Animation */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -39,11 +38,9 @@ export default function Page() {
           }}
         />
 
-        {/* Hero Section */}
         <Hero />
       </div>
 
-      {/* Remaining Sections */}
       <SecondHeroSection />
       <ThirdSection />
       <Banner />

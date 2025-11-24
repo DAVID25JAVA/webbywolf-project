@@ -17,16 +17,21 @@ function SecondHeroSection() {
         {/* Gradient Bottom Border */}
         <div className="absolute left-0 bottom-0 h-6 w-full bg-linear-to-r from-blue-900 via-green-500 to-purple-900"></div>
 
-        <p className="text-lg text-blue-600 font-semibold">Lorem ipsum dolor sit</p>
+        <p className="text-lg text-blue-600 font-semibold">
+          Lorem ipsum dolor sit
+        </p>
 
         <div className="flex justify-between gap-5 items-center mt-1">
           {/* left side content */}
           <div className="md:w-[50%] w-full">
-            <h1 className="mt-2 text-black md:text-3xl text-xl tracking-tight md:tracking-normal font-bold w-xs uppercase">
+            <h1 className="heading  uppercase">
               Lorem ipsum dolor sit amet
             </h1>
-            <p className="text-gray-700 md:leading-7 pt-3">
-              Lorem ipsum dolor sit amet consectetur. Amet sodales sociis facilisis donec dui...
+            <p className="text-[--color-text-primary] md:leading-7 pt-3">
+              Lorem ipsum dolor sit amet consectetur. Amet sodales sociis
+              facilisis donec dui. Mi porttitor ut aliquam mattis maecenas eget
+              integer in nam. Non nisl iaculis at felis aliquet. Hendrerit
+              tellus at purus lectus.
             </p>
 
             {secondHeroSection?.map((item) => (
@@ -38,8 +43,14 @@ function SecondHeroSection() {
                 viewport={{ once: true }}
                 className="flex items-center gap-3 pt-2 md:pt-3"
               >
-                <Image alt="img" src={item?.img} className="w-36 space-y-2 p-2 rounded" />
-                <p className="md:text-base text-sm text-gray-700 max-w-xs">{item?.content}</p>
+                <Image
+                  alt="img"
+                  src={item?.img}
+                  className="w-36 space-y-2 p-2 rounded"
+                />
+                <p className="  text-text-primary text-sm md:text-base max-w-xs">
+                  {item?.content}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -51,7 +62,12 @@ function SecondHeroSection() {
             transition={{ duration: 0.8 }}
             className="hidden md:block"
           >
-            <Image alt="img" src={assets?.Section1Image?.src} width={500} height={300} />
+            <Image
+              alt="img"
+              src={assets?.Section1Image?.src}
+              width={500}
+              height={300}
+            />
           </motion.div>
         </div>
 
@@ -61,7 +77,7 @@ function SecondHeroSection() {
           transition={{ duration: 0.8 }}
           className="pt-8 flex gap-3 pb-10 md:pb-0"
         >
-          <button className="bg-blue-700 font-semibold rounded hover:bg-blue-800 text-white flex p-2 gap-2">
+          <button className=" btn-primary flex p-2 gap-2">
             Lorem Ipsum <MoveRight />
           </button>
           <p className="flex gap-2 items-center text-blue-800 font-semibold">

@@ -15,11 +15,11 @@ function SocialMedia() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <p className="text-base text-blue-600 font-semibold">Lorem Ipsum</p>
-            <h1 className="md:text-4xl text-xl font-bold text-black md:py-4">
+            <p className="text-base text-primary font-semibold">Lorem Ipsum</p>
+            <h1 className=" subheading-lg md:py-4">
               Lorem ipsum dolor sit amet
             </h1>
-            <p className="text-gray-700 text-base pt-3">
+            <p className="text-text-primary  text-base pt-2">
               Lorem ipsum dolor sit amet consectetur. Vulputate amet aliquet
               morbi suspendisse convallis. Urna a urna lectus donec felis risus
               duis pellentesque. Pellentesque ultricies ipsum.

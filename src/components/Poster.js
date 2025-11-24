@@ -18,7 +18,7 @@ function Poster() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
-        className="text-gray-900 font-extrabold md:text-3xl text-2xl text-center"
+        className="heading text-center"
       >
         Lorem ipsum dolor sit amet
       </motion.p>
@@ -27,7 +27,7 @@ function Poster() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
-        className="text-gray-700 text-base text-center py-5"
+        className="text-text-primary text-base text-center py-5"
       >
         Aliquet sed nulla tincidunt pulvinar sed fames sit facilisis dictumst. Ornare faucibus
         quis velit fringilla aliquam ultricies. Malesuada ut aliquam at ac est nisi, interdum
@@ -58,8 +58,8 @@ function Poster() {
           transition={{ delay: 0.8, duration: 0.5 }}
           className="bg-white shadow-xl p-5 max-w-lg absolute md:top-60 md:right-36"
         >
-          <h3 className="text-gray-900 font-semibold text-lg pt-2">Artist & Investor</h3>
-          <p className="text-base text-gray-700 pt-3">
+          <h3 className=" subheading-sm pt-2">Artist & Investor</h3>
+          <p className="text-base  text-text-primary pt-3">
             Enim sagittis, sit porttitor morbi lobortis amet, libero adipiscing auctor. Malesuada
             tristique libero, id netus tincidunt. Egestas ac arcu amet nisl quis est ...
           </p>
@@ -69,7 +69,7 @@ function Poster() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.96 }}
             transition={{ type: "spring", stiffness: 200 }}
-            className="text-blue-700 text-sm font-semibold flex items-center gap-3 pt-5 hover:underline cursor-pointer"
+            className="text-primary text-sm font-semibold flex items-center gap-3 pt-5 hover:underline cursor-pointer"
           >
             Read Full Story <MoveRight size={30} />
           </motion.button>

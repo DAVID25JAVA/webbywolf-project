@@ -11,7 +11,7 @@ function FAQ() {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  // Animation variants
+  
   const fadeUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -27,7 +27,7 @@ function FAQ() {
           whileInView="visible"
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="uppercase text-gray-800 font-extrabold md:text-3xl text-xl"
+          className="uppercase heading"
         >
           FREQUENTLY ASKED QUESTIONS (FAQs)
         </motion.h1>
@@ -45,7 +45,7 @@ function FAQ() {
               onClick={() => toggleFAQ(index)}
             >
               <div className="flex items-center justify-between">
-                <p className="text-gray-800 font-semibold text-lg">
+                <p className=" subheading-sm">
                   {data?.question}
                 </p>
                 {activeIndex === index ? (

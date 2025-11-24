@@ -11,7 +11,7 @@ function Friend() {
     <div className="max-w-7xl mx-auto md:px-8 px-4 md:mt-20 mt-14">
       <div className="flex items-center justify-between flex-col md:flex-row sm:flex-row md:gap-8">
         <div>
-          <h1 className="text-black md:text-3xl text-2xl font-semibold uppercase">
+          <h1 className="heading uppercase">
             Lorem ipsum dolor sit amet{" "}
           </h1>
 
@@ -23,8 +23,8 @@ function Friend() {
                 className={`md:w-32 w-full text-center border border-gray-300 py-2 rounded-lg transition-all duration-200
               ${
                 active === step
-                  ? "bg-gray-200 text-gray-700 shadow-md"
-                  : "text-gray-700 hover:bg-gray-300"
+                  ? "bg-gray-200  text-text-primary shadow-md"
+                  : "text-text-primary hover:bg-gray-300"
               }`}
               >
                 {step}

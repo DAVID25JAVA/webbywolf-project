@@ -23,17 +23,17 @@ function Testimonial() {
           LOGO
         </div>
 
-        <h1 className="md:text-3xl text-xl text-black uppercase font-bold text-center">
+        <h1 className="  uppercase  heading text-center">
           Lorem ipsum dolor sit amet consectetur. Dui.
         </h1>
 
-        <p className="text-base text-gray-700 max-w-md text-center">
+        <p className="text-base  text-text-primary max-w-md text-center">
           Lorem ipsum dolor sit amet consectetur. Nisl faucibus vitae porttitor
           pharetra tempor quis arcu. Ipsum nullam.
         </p>
 
         <motion.button
-          className="flex items-center gap-2 text-white bg-blue-700 hover:bg-blue-600 px-3 py-2 rounded-lg"
+          className="flex items-center gap-2 btn-primary rounded-lg"
           variants={fadeUp}
           initial="hidden"
           animate="visible"

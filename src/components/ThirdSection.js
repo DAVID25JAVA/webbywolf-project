@@ -24,20 +24,20 @@ function ThirdSection() {
           animate="visible"
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <p className="text-blue-700 font-bold text-base">
+          <p className="text-primary font-bold text-base">
             Lorem ipsum dolor sit amet{" "}
           </p>
 
           <motion.h1
-            className="md:text-xl text-xl py-4 font-bold text-black tracking-tighter uppercase"
+            className=" heading py-4 uppercase"
             variants={fadeUp}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Lorem ipsum dolor sit amet consectetur. Eu elit.
+            Lorem ipsum dolor sit amet consectetur.
           </motion.h1>
 
           <motion.p
-            className="text-base text-gray-700 leading-6"
+            className="text-base text-text-primary leading-6"
             variants={fadeUp}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
@@ -56,10 +56,8 @@ function ThirdSection() {
                   <Image alt="img" src={item?.img} width={70} height={60} />
                 </div>
                 <div>
-                  <p className="text-black font-semibold text-[19px]">
-                    {item?.tittle}
-                  </p>
-                  <p className="text-gray-700 text-base pt-1">
+                  <p className=" subheading-sm">{item?.tittle}</p>
+                  <p className=" text-text-primary pt-1">
                     {item?.description}
                   </p>
                 </div>

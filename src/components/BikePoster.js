@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const NoLimitsSectionAdjusted = () => {
   return (
-    <div className="bg-gray-50 pt-20 md:pb-[150px] pb-[100px] px-4 md:px-8">
+    <div className="bg-gray-50 pt-20 md:pb-[150px] pb-10 px-4 md:px-14">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
         {/* Left Content Animation */}
         <motion.div
@@ -31,7 +31,7 @@ const NoLimitsSectionAdjusted = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             viewport={{ once: true }}
-            className="text-2xl sm:text-4xl font-extrabold text-gray-900 mb-6 leading-tight"
+            className="subheading-lg mb-3 leading-tight"
           >
             LOREM IPSUM DOLOR SIT AMET
           </motion.h2>
@@ -41,7 +41,7 @@ const NoLimitsSectionAdjusted = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
             viewport={{ once: true }}
-            className="text-lg text-gray-600 mb-8 max-w-lg pr-12"
+            className=" text-text-primary mb-8 max-w-lg pr-12"
           >
             Lorem ipsum dolor sit amet consectetur. Nisl faucibus vitae
             porttitor pharetra tempor quis arcu. Ipsum nullam.
@@ -52,7 +52,7 @@ const NoLimitsSectionAdjusted = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5 }}
             viewport={{ once: true }}
-            className="w-fit px-8 py-3 bg-blue-600 text-white font-medium rounded-md shadow-lg hover:bg-blue-700 transition duration-300 flex items-center gap-2"
+            className="  btn-primary w-fit shadow-lg hover:bg-blue-700 transition duration-300 flex items-center gap-2"
           >
             Lorem Ipsum <MoveRight />
           </motion.button>
@@ -110,7 +110,7 @@ const NoLimitsSectionAdjusted = () => {
             />
           </div>
 
-          <div className="col-span-6 row-span-2 mt-[165px] md:mt-2 md:h-80 h-48">
+          <div className="col-span-6 row-span-2 mt-[200px] md:mt-2 md:h-80 h-48">
             <img
               src={assets?.bike4?.src}
               alt="Sunset ride"

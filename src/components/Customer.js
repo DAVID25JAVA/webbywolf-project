@@ -21,7 +21,7 @@ function Customer() {
         <div>
           {/* Heading */}
           <motion.h1
-            className="font-extrabold md:text-3xl text-2xl text-blue-700"
+            className="heading uppercase text-primary"
             variants={fadeUp}
             initial="hidden"
             animate="visible"
@@ -32,7 +32,7 @@ function Customer() {
 
           {/* Paragraph */}
           <motion.p
-            className="text-base text-gray-700 py-5 max-w-xl"
+            className="text-base text-text-primary py-5 max-w-xl"
             variants={fadeUp}
             initial="hidden"
             animate="visible"
@@ -48,7 +48,7 @@ function Customer() {
             initial="hidden"
             animate="visible"
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-            className="flex mb-12 sm:mb-10 md:mb-0 items-center gap-2 text-white bg-blue-700 hover:bg-blue-600 px-3 py-1 mt-3"
+            className="flex mb-12 sm:mb-10 md:mb-0 items-center gap-2 btn-primary mt-3"
           >
             Lorem Ipsum <MoveRight />
           </motion.button>
@@ -61,12 +61,12 @@ function Customer() {
             animate="visible"
             transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
           >
-            <p className="text-gray-700 font-semibold text-lg">Lorem ipsum dolor sit</p>
-            <p className="text-gray-700 text-base pt-5">Lorem ipsum dolor sit amet...</p>
-            <p className="text-gray-700 text-base">
+            <p className=" subheading-sm">Lorem ipsum dolor sit</p>
+            <p className=" text-text-primary text-base pt-5">Lorem ipsum dolor sit amet...</p>
+            <p className=" text-text-primary text-base">
               Lorem ipsum dolor sit amet consectetur. Egestas congue mattis ut...
             </p>
-            <p className="text-gray-700 text-base">
+            <p className="text-text-primary text-base">
               Lorem ipsum dolor sit amet consectetur. Habitant vestibulum vitae...
             </p>
           </motion.div>

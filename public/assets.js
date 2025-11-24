@@ -254,7 +254,7 @@ export const reviewData = [
   {
     user: "Jane Cooper",
     img: user1,
-     icon: cloud,
+    icon: cloud,
     review:
       "The platform helped streamline my project workflow and improved communication. Highly recommended!",
   },

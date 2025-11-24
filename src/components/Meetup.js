@@ -11,7 +11,7 @@ function Meetup() {
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="md:mt-20 mt-10 lg:mr-16 2xl:mr-0"
+      className="md:mt-20 mt-1 lg:mr-16 2xl:mr-0"
     >
       <motion.div
         initial="hidden"
@@ -56,11 +56,11 @@ function Meetup() {
             transition={{ duration: 0.5 }}
             className="md:p-14 px-5 mt-14"
           >
-            <p className="text-blue-700 text-base font-semibold">Lorem Ipsum</p>
-            <p className="text-black font-bold md:text-4xl uppercase text-2xl max-w-lg py-4">
-              <span className="text-blue-700">Lorem</span> ipsum dolor sit amet consectetur. Enim donec.
+            <p className=" text-primary text-base font-semibold">Lorem Ipsum</p>
+            <p className="  uppercase  heading max-w-lg py-4 ">
+              <span className="text-primary heading ">Lorem</span> ipsum dolor sit amet consectetur. Enim donec.
             </p>
-            <p className="text-gray-700 text-base max-w-lg">
+            <p className="text-text-primary text-base max-w-lg">
               Lorem ipsum dolor sit amet consectetur. Vel pellentesque odio enim amet non.
             </p>
 
@@ -70,10 +70,10 @@ function Meetup() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              <div className="text-gray-700 font-semibold space-y-3">
+              <div className=" text-text-primary font-semibold space-y-3">
                 <p>Lorem Ipsum</p><p>Lorem Ipsum</p><p>Lorem Ipsum</p><p>Lorem Ipsum</p>
               </div>
-              <div className="text-gray-700 font-semibold space-y-3">
+              <div className="text-text-primary font-semibold space-y-3">
                 <p>Lorem Ipsum</p><p>Lorem Ipsum</p><p>Lorem Ipsum</p><p>Lorem Ipsum</p>
               </div>
             </motion.div>
@@ -85,7 +85,7 @@ function Meetup() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="flex mb-12 sm:mb-10 md:mb-0 items-center gap-2 text-white bg-blue-700 hover:bg-blue-600 px-3 py-1 mt-8"
+              className="flex mb-12  btn-primary items-center gap-2   mt-8"
             >
               Lorem Ipsum <MoveRight />
             </motion.button>

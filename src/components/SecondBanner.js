@@ -29,7 +29,7 @@ function SecondBanner() {
           viewport={{ once: true }}
           className="flex items-center justify-center h-[calc(100vh-120px)]"
         >
-          <p className="text-white text-center max-w-4xl mx-auto font-bold md:text-4xl text-2xl uppercase leading-10">
+          <p className="text-white text-center max-w-4xl mx-auto  heading uppercase leading-10">
             dolor sit amet consectetur. Quis adipiscing purus egestas aliquam
             viverra mi. dolor sit amet consectetur. Quis adipiscing
           </p>

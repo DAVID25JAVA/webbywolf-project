@@ -125,18 +125,18 @@ function Contact() {
   return (
     <div className="max-w-7xl mx-auto md:px-8 px-4 md:mt-20 my-10">
       <div>
-        {/* 🟩 Heading Animation */}
+        {/*  Heading Animation */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-black uppercase md:text-4xl text-xl text-center font-bold"
+          className="  uppercase text-center subheading-lg"
         >
           REQUEST A QUOTE
         </motion.h1>
 
-        {/* 🟩 Container Animation */}
+        {/*  Container Animation */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -156,7 +156,9 @@ function Contact() {
               {/* Input Fields */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Name
+                  </label>
                   <input
                     type="text"
                     name="name"
@@ -171,7 +173,9 @@ function Contact() {
                   )}
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Email
+                  </label>
                   <input
                     type="email"
                     name="email"
@@ -189,7 +193,9 @@ function Contact() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Phone Number
+                  </label>
                   <input
                     type="tel"
                     name="phone"
@@ -204,14 +210,18 @@ function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Timeframe</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Timeframe
+                  </label>
                   <select
                     name="timeframe"
                     value={formData.timeframe}
                     onChange={handleChange}
                     onBlur={handleBlur}
                     className="w-full px-4 py-2 bg-gray-100 placeholder:text-gray-500 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition"
-                    style={{ color: formData.timeframe ? "#111827" : "#6B7280" }}
+                    style={{
+                      color: formData.timeframe ? "#111827" : "#6B7280",
+                    }}
                   >
                     <option value="">Select timeframe</option>
                     <option value="1-2 weeks">1-2 weeks</option>
@@ -220,7 +230,9 @@ function Contact() {
                     <option value="3+ months">3+ months</option>
                   </select>
                   {touched.timeframe && errors.timeframe && (
-                    <p className="text-red-500 text-sm mt-1">{errors.timeframe}</p>
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.timeframe}
+                    </p>
                   )}
                 </div>
               </div>
@@ -228,7 +240,9 @@ function Contact() {
               {/* More Inputs */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Size</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Size
+                  </label>
                   <select
                     name="size"
                     value={formData.size}
@@ -248,7 +262,9 @@ function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Quantity</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Quantity
+                  </label>
                   <input
                     type="number"
                     name="quantity"
@@ -260,7 +276,9 @@ function Contact() {
                     placeholder="Enter quantity"
                   />
                   {touched.quantity && errors.quantity && (
-                    <p className="text-red-500 text-sm mt-1">{errors.quantity}</p>
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.quantity}
+                    </p>
                   )}
                 </div>
               </div>
@@ -280,15 +298,22 @@ function Contact() {
                   placeholder="Tell us about your project requirements..."
                 />
                 {touched.description && errors.description && (
-                  <p className="text-red-500 text-sm mt-1">{errors.description}</p>
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.description}
+                  </p>
                 )}
               </div>
 
               <p className="text-gray-700 text-base text-center">
                 By submitting this form you agree to our{" "}
-                <span className="underline cursor-pointer hover:text-blue-700">Terms of Service</span>{" "}
+                <span className="underline cursor-pointer hover:text-blue-700">
+                  Terms of Service
+                </span>{" "}
                 and{" "}
-                <span className="underline cursor-pointer hover:text-blue-700">Privacy Policy</span>.
+                <span className="underline cursor-pointer hover:text-blue-700">
+                  Privacy Policy
+                </span>
+                .
               </p>
 
               {/* 🟦 Button Animation */}
@@ -301,7 +326,7 @@ function Contact() {
               >
                 <button
                   onClick={handleSubmit}
-                  className="gap-2 text-white cursor-pointer font-semibold px-5 py-2 w-full sm:w-auto rounded bg-blue-700 flex items-center justify-center"
+                  className="gap-2   cursor-pointer fo    btn-primary flex items-center justify-center"
                 >
                   Lorem Ipsum <MoveRight />
                 </button>

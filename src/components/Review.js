@@ -43,7 +43,7 @@ function Review() {
             <p className="text-base text-white mb-2">
               Join other Sun harvesters
             </p>
-            <h1 className="text-white md:text-3xl text-2xl font-extrabold uppercase mb-4">
+            <h1 className=" subheading-lg text-white uppercase mb-2">
               Lorem ipsum dolor sit amet
             </h1>
             <p className="text-base text-white max-w-lg">
